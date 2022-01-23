@@ -8,18 +8,24 @@
     "airbnb",
     "react-app",
     "airbnb",
-    "prettier"
+    "airbnb-typescript",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
+    "project": "./tsconfig.json",
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "@typescript-eslint"
   ],
   "rules": {
     "prettier/prettier": [
@@ -31,12 +37,18 @@
     ],
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off",
+    "react/button-has-type": "off",
+    "import/no-cycle": "off",
+    "no-param-reassign": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
         "extensions": [
           ".js",
-          ".jsx"
+          ".jsx",
+          ".ts",
+          ".tsx"
         ]
       }
     ]
