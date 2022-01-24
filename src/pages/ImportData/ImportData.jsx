@@ -127,7 +127,7 @@ function ImportData() {
                 };
                 i.src = element.data_url;
             })))
-    ).then((images) => {
+    .then((images) => {
       const data = {
         folder_name: folder_name,
         images: images,

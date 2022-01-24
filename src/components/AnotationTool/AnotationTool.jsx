@@ -280,9 +280,7 @@ function AnotationTool({
   }, [isRotationAllowed, image, marks, setNotes]);
 
   const isMarkerSaved = (marker) => markersInfoArray.current.some(markerInfo => markerInfo.id === marker.id && markerInfo.notes === marker.notes) ||
-            markersArray.current.some(m => m.id === marker.id && m.notes === marker.notes)
-    );
-  };
+            markersArray.current.some(m => m.id === marker.id && m.notes === marker.notes);
 
   const getNotesFromMarkers = (marks) => {
     const notes = {};
